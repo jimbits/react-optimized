@@ -1,0 +1,19 @@
+import {css} from '@emotion/core'
+
+const navbarStyles = css `
+   padding: 1rem;
+   box-shadow: 0 0 5px 0 #5f6369;
+   background:#282c34;
+   color:#ffffff;
+   ul{
+       display:flex;
+       justify-content:space-evenly;
+   }
+   li{
+       margin: 0 1rem;
+       user-select:none;
+   }
+   
+`
+
+export default navbarStyles
