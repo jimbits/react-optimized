@@ -1,28 +1,15 @@
 ## React-Tracked Library
-
-|
-|---src
-     |----index.js
-     |----App.js
-     |----css
-     |----pages
-            |----landingpage
-            |----reacttrackedpage
-     |----context
-            |----index.js
-            |----CounterContext.js
-     |----containers
-            |----index.js
-            |----Counter.js
-            |----CounterDisplay.js
-            |----style.js
-     |----components
-            |----sitenav
-                   |----index.js
-                   |----SiteNav.js
-                   |----style.js
+File includes two seperate pages. The landing page is four counters that use the React Context API and React Hooks to provide each counter with the updated value.
+ 
             
-
+ .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── test                    # Automated tests (alternatively `spec` or `tests`)
+    ├── tools                   # Tools and utilities
+    ├── LICENSE
+    └── README.md
 
 ### Counter.js
 
