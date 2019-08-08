@@ -3,7 +3,7 @@ File includes two seperate pages. The landing page is four counters that use the
  
             
 .
-+-- _config.yml
+ -- _config.yml
 +-- _drafts
 |   +-- begin-with-the-crazy-ideas.textile
 |   +-- on-simplicity-in-technology.markdown
