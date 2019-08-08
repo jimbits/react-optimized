@@ -6,8 +6,8 @@ import pageHeaderStyles from "./styles";
 function PageHeader ({title, tagline}){
     return (
       <header css={pageHeaderStyles}>
-        <h1>{title}</h1>
         <p>{tagline}</p>
+        <h1>{title}</h1>
       </header>
     );
 

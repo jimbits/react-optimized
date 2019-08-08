@@ -1,3 +1,3 @@
-import CounterDisplay from "containers/untracked/node_modules/CounterDisplay"
+import CounterDisplay from "./CounterDisplay"
 
 export default CounterDisplay

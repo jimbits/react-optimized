@@ -1,14 +1,17 @@
 import React from "react";
 import PageHeader from "components/pageheader"
 import CounterDisplay from "containers/untracked"
+import { CounterProvider } from "context/hooks/CounterContext";
 function LandingPage(props) {
   return (
     <section>
-      <PageHeader title="Global State Managment"
-      tagline="Using Context API and React Hooks"
+      <PageHeader 
+      title="Context API and React Hooks"
+      tagline="Global State Managment"
       />
-
-      {props.children}
+      <CounterProvider>
+         <CounterDisplay/>
+      </CounterProvider>
     </section>
   );
 }

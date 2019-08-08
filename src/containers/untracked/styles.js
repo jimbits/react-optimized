@@ -41,7 +41,7 @@ const counterDisplayStyles = css`
       display: block;
     }
   }
-  @media (min-width:420px) {
+  @media (min-width: 420px) {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -56,15 +56,13 @@ const counterDisplayStyles = css`
     .counter {
       min-width: calc(33% - 1rem);
       flex-grow: 1;
-      margin:0 0.5rem 1rem;
+      margin: 0 0.5rem 1rem;
     }
   }
   @media (min-width: 840px) {
     max-width: 1200px;
     .counter {
-      
       min-width: calc(25% - 1rem);
-      
     }
   }
 `;

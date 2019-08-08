@@ -1,28 +1,39 @@
 /** @jsx jsx */
 import {jsx} from "@emotion/core"
-import React, {useContext} from "react"
-import Counter from "./Counter";
-import {CounterContext} from "context/CounterContext"
-import counterDisplayStyles from "./styles";
 
+import Counter from "./Counter";
+import counterDisplayStyles from "./styles";
+import {  useTracked, createContainer } from "react-tracked";
+import newValue from "context/tracked/CounterContext"
 
 
  
-
-export default function CounterDisplay(props) {
-  const [state,dispatch] = useContext(CounterContext)
-  const counters = state.counters ;
-   
+const OptimizedContainer = ({index})=>{
+  const Container = createContainer(newValue)
+ 
   return (
-    <section css={counterDisplayStyles}>
-      {counters.map((item, index) => (
-        <Counter
-          key={item.id}
-          index={index}
-          counter={counters[index]}
-          dispatch={dispatch}
-        />
-      ))}
-    </section>
+     
+    <Container.Provider>
+        <Counter useTracked={Container.useTracked} index={index} />
+    </Container.Provider>
+     
   );
 }
+
+function CounterDisplay(props) {
+   const [state, dispatch] = useTracked();
+   const counters = Object.keys(state.counters);
+  
+   
+ 
+ 
+  return (
+    <div css={counterDisplayStyles}>
+      {state.counters.map((item, index) => (
+        <OptimizedContainer key={item.id} index={index} />
+      ))}
+    </div>
+  ); 
+}
+
+export default CounterDisplay

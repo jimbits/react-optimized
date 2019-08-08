@@ -14,7 +14,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "add":
     
-      const updatedCounterList = state.counters.map((item, index) => {
+      const newAddList = state.counters.map((item, index) => {
         if (item.id === action.payload.id) {
           return {
             ...item, // copy the existing item
@@ -24,22 +24,26 @@ const reducer = (state, action) => {
           return item;
         }
       });
-     const newState = {
-       ...state,
-       counters: updatedCounterList
-     }
-     console.log(newState)
-      return newState
+     
+      return {
+        ...state,
+        counters: newAddList
+      };
     case "sub":
-       state.counters.map((item, index) => {
+       const newSubList = state.counters.map((item, index) => {
          if (item.id === action.payload.id) {
-           console.log(action.payload.id);
-           console.log("update object");
+           return {
+             ...item, // copy the existing item
+             count: item.count - 1
+           };
          }else{
            return item
          }
        });
-      return  state
+      return {
+        ...state,
+        counters: newSubList
+      };
     default:
       return state;
   }

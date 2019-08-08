@@ -1,14 +1,14 @@
-import React, {useState, useMemo}  from 'react'
+import React  from "react";
+
  
 
+const Counter =  ({ useTracked, index }) => {
+  const [state, dispatch] = useTracked();
+  const counter = state.counters[index];
 
-function Counter({index, counter, dispatch}) {
-     
-
-    
-    return (
-      <aside className="counter">
-        <header>
+  return (
+    <aside className="counter">
+     <header>
           <h1 className="counter-heading">Counter</h1>
           <p className="counter-display">{ counter.count}</p>
         </header>
@@ -35,10 +35,9 @@ function Counter({index, counter, dispatch}) {
           <p>
             render <span> {(Math.random() * 100).toFixed(0)}</span>
           </p>
-        </footer>
-      </aside>
-    );
-}
+        </footer>  
+    </aside>
+  );
+} 
 
- 
 export default Counter
