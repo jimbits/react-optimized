@@ -1,16 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React-Tracked Library
 
-## Available Scripts
+|
+|---src
+     |----index.js
+     |----App.js
+     |----css
+     |----pages
+            |----landingpage
+            |----reacttrackedpage
+     |----context
+            |----index.js
+            |----CounterContext.js
+     |----containers
+            |----index.js
+            |----Counter.js
+            |----CounterDisplay.js
+            |----style.js
+     |----components
+            |----sitenav
+                   |----index.js
+                   |----SiteNav.js
+                   |----style.js
+            
 
-In the project directory, you can run:
 
-### `npm start`
+### Counter.js
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Counter Component uses props to display count state
+ ```JSX
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+class Child extends Component {
+  render() {
+    return (
+        <p className="App-intro">
+          I'm a childish component
+        </p>
+    );
+  }
+}
+
+export default Child;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### `npm test`
 

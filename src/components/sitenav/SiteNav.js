@@ -5,10 +5,9 @@ function Navbar() {
     return (
         <nav css={navbarStyles}>
             <ul>
+                <li>hooks+context</li>
                 <li>react-tracked</li>
-                <li>react-hooks</li>
-                <li>react-hooks-redux</li>
-                <li>reactive-react-redux</li>
+            
             </ul>
         </nav>
     )

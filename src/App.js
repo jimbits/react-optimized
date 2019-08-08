@@ -1,8 +1,8 @@
 import React from "react";
 import GlobalStyles from "./css/GlobalStyles";
 import Navbar from "./components/sitenav";
-import LandingPage from "./pages/landingpage";
-import CounterDisplay from "./containers/counters/CounterDisplay";
+import LandingPage from "./pages/hookspage";
+import CounterDisplay from "./containers/untracked/CounterDisplay";
 import { CounterProvider } from "./context/CounterContext";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <CounterProvider>
         <GlobalStyles />
         <Navbar />
-        <CounterDisplay />
-        <LandingPage />
+        <LandingPage/>
+        
       </CounterProvider>
     </div>
   );

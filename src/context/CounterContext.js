@@ -1,30 +1,45 @@
 import React, { useReducer } from "react";
 
 const initialState = {
-  counter: {
-    id: "3be",
-    count: 0
-  }
+  counters: [
+    { id: "3be", count: 0 },
+    { id: "4ct", count: 0 },
+    { id: "5fy", count: 0 },
+    { id: "6dm", count: 0 },
+  ]
 };
 
 const CounterContext = React.createContext(initialState);
 const reducer = (state, action) => {
   switch (action.type) {
     case "add":
-      console.log("add");
-      return {
-        ...state, counter:{
-           ...state.counter,
-           count: state.counter.count +1
+    
+      const updatedCounterList = state.counters.map((item, index) => {
+        if (item.id === action.payload.id) {
+          return {
+            ...item, // copy the existing item
+            count: item.count + 1
+          };
+        } else {
+          return item;
         }
-      };
+      });
+     const newState = {
+       ...state,
+       counters: updatedCounterList
+     }
+     console.log(newState)
+      return newState
     case "sub":
-      return {
-        ...state, counter:{
-           ...state.counter,
-           count: state.counter.count  - 1
-        }
-      };
+       state.counters.map((item, index) => {
+         if (item.id === action.payload.id) {
+           console.log(action.payload.id);
+           console.log("update object");
+         }else{
+           return item
+         }
+       });
+      return  state
     default:
       return state;
   }

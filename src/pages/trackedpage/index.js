@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function LandingPage (props){
+function TrackedPage (props){
     return(
         <section>
             <header>
@@ -13,4 +13,4 @@ function LandingPage (props){
     )
 }
 
-export default LandingPage
+export default TrackedPage
