@@ -1,7 +1,8 @@
-## React-Tracked Library
+# React-Tracked Library
+### hooks link (landing page)
 File includes two seperate pages. The landing page is four counters that use the React Context API and React Hooks to provide each counter with the updated value.
 
-react-tracked link
+### react-tracked link
 File includes two seperate pages. The landing page is four counters that use the React Context API and React Hooks to provide each counter with the updated value.
  
 
