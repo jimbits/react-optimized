@@ -1,13 +1,15 @@
-import {createStore} from "react-redux"
+import {createStore} from "redux"
 import reducer from "./reducer"
 
 const initialState = {
-    counter:{
-        id:1,
-        count:0
-    }
-}
+  counters: [
+    { id: "3be", count: 0 },
+    { id: "4ct", count: 0 },
+    { id: "5fy", count: 0 },
+    { id: "6dm", count: 0 }
+  ]
+};
 
-const store = createStore(state=initialState, reducer)
+const store = createStore(reducer, initialState)
 
 export default store
